@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        VITE_OPENWEATHER_API_KEY: ${VITE_OPENWEATHER_API_KEY}
+    ports:
+      - "8080:80"
