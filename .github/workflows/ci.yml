@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docker:
+    uses: ./.github/workflows/docker-build-reusable.yml
+    with:
+      image_name: aplikacja-pogodowa
+    secrets:
+      VITE_OPENWEATHER_API_KEY: ${{ secrets.VITE_OPENWEATHER_API_KEY }}
