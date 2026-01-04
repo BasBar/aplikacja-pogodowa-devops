@@ -19,6 +19,9 @@ Projekt zaliczeniowy z przedmiotu Programowanie Frontend.
 - ulubione miasta (Redux + localStorage)
 
 ## Uruchomienie projektu
-1. `npm install`
-2. zmienić rozszerzenie pliku `.env.example` na `.env`
-3. `npm run dev`
+1. Sklonuj repozytorium:
+   git clone https://github.com/BasBar/aplikacja-pogodowa
+   cd aplikacja-pogodowa
+2. Zainstaluj zależności: npm install
+3. Utwórz plik .env na podstawie .env.example i dodaj swój klucz API OpenWeatherMap: VITE_OPENWEATHER_API_KEY=TWÓJ_KLUCZ_API, klucz znajduje się tutaj https://home.openweathermap.org/api_keys, trzeba się zalogować
+4. npm run dev
