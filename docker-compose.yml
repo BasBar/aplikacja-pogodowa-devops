@@ -6,5 +6,23 @@ services:
       context: .
       args:
         VITE_OPENWEATHER_API_KEY: ${VITE_OPENWEATHER_API_KEY}
+    container_name: aplikacja-pogodowa
     ports:
       - "8080:80"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: weather
+      POSTGRES_PASSWORD: weather
+      POSTGRES_DB: weather
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:

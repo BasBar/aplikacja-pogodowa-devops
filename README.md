@@ -21,6 +21,17 @@ Projekt umożliwia:
 
 ---
 
+# Baza danych i wolumen
+
+Projekt zawiera dodatkowy serwis bazy danych PostgreSQL uruchamiany w Dockerze.
+Dane bazy są przechowywane w nazwanym wolumenie Docker (`pgdata`), co zapewnia
+trwałość danych pomimo restartu kontenerów.
+
+Baza danych została dodana w celu demonstracji wykorzystania kontenerów stanowych
+i wolumenów Docker. Aplikacja frontendowa nie wymaga backendu do działania.
+
+---
+
 # Zmienne środowiskowe
 
 Aplikacja wymaga klucza API do OpenWeatherMap.
